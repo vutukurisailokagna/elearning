@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Testimonials</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9ff;
+color:#1e293b;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+}
+
+.logo span{
+color:#5b5bff;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+.nav-links a.active{
+color:black;
+font-weight:600;
+}
+
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px 8% 20px;
+}
+
+.header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.header p{
+color:#64748b;
+}
+
+
+/* TESTIMONIAL GRID */
+
+.testimonials{
+
+padding:30px 8% 80px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+
+/* CARD */
+
+.testimonial-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+transition:.3s;
+
+}
+
+.testimonial-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+
+}
+
+
+/* PROFILE */
+
+.profile{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:15px;
+
+}
+
+.profile img{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.profile h3{
+
+font-size:18px;
+
+}
+
+
+/* ROLE */
+
+.role{
+
+font-size:13px;
+
+color:#5b5bff;
+
+}
+
+
+/* REVIEW TEXT */
+
+.review{
+
+color:#64748b;
+
+font-size:14px;
+
+margin-bottom:15px;
+
+}
+
+
+/* STARS */
+
+.stars{
+
+color:gold;
+
+font-size:18px;
+
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:10px 25px;
+    border-radius:30px;
+    border:none;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.btn-signin{
+    background:linear-gradient(90deg,#6c63ff,#5a54e8);
+    color:white;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+}
+
+.btn{
+    text-decoration: none ;
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+E-learning<span>.</span>
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="ecom.html">Home</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="mentor.html">Mentor</a></li>
+
+<li><a href="group.html">Group</a></li>
+
+<li><a href="#" class="active">Testimonials</a></li>
+
+<li><a href="docs.html">Docs</a></li>
+
+</ul>
+
+<div class="nav-buttons" id="authArea">
+<a href="login1.html" class="btn btn-signin">Login</a>
+<a href="signup.html" class="btn btn-signup">Sign Up</a>
+</div>
+
+</nav>
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>Student Testimonials</h1>
+
+<p>What our students say about us</p>
+
+</div>
+
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/11.jpg">
+
+<div>
+
+<h3>Ravi Kumar</h3>
+
+<div class="role">
+Computer Science Student
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+This platform helped me improve my programming skills and build real projects.
+
+</div>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/21.jpg">
+
+<div>
+
+<h3>Priya Sharma</h3>
+
+<div class="role">
+Engineering Student
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+Mentors explain concepts very clearly. I learned web development easily.
+
+</div>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/33.jpg">
+
+<div>
+
+<h3>Arjun Reddy</h3>
+
+<div class="role">
+B.Tech Student
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+The courses are structured well and easy to understand.
+
+</div>
+
+<div class="stars">
+
+★★★★☆
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+<div>
+
+<h3>Sneha Patel</h3>
+
+<div class="role">
+IT Student
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+Learning groups helped me practice coding regularly.
+
+</div>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/51.jpg">
+
+<div>
+
+<h3>Vikram Singh</h3>
+
+<div class="role">
+Software Learner
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+Best platform to learn programming and improve skills.
+
+</div>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+</div>
+
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/60.jpg">
+
+<div>
+
+<h3>Pooja Reddy</h3>
+
+<div class="role">
+Student
+</div>
+
+</div>
+
+</div>
+
+<div class="review">
+
+Very easy to use and clean interface. Highly recommended.
+
+</div>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/71.jpg">
+
+<div>
+<h3>Rahul Verma</h3>
+<div class="role">Computer Engineering Student</div>
+</div>
+
+</div>
+
+<div class="review">
+The course structure is very clear and the projects helped me understand coding better.
+</div>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/72.jpg">
+
+<div>
+<h3>Anjali Gupta</h3>
+<div class="role">Web Development Student</div>
+</div>
+
+</div>
+
+<div class="review">
+I built my first website after joining the web development course here.
+</div>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/73.jpg">
+
+<div>
+<h3>Karthik Reddy</h3>
+<div class="role">B.Tech Student</div>
+</div>
+
+</div>
+
+<div class="review">
+The mentors explain difficult topics in a very simple way.
+</div>
+
+<div class="stars">
+★★★★☆
+</div>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/74.jpg">
+
+<div>
+<h3>Meera Nair</h3>
+<div class="role">Data Science Learner</div>
+</div>
+
+</div>
+
+<div class="review">
+The data science course helped me understand machine learning concepts clearly.
+</div>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg">
+
+<div>
+<h3>Aditya Sharma</h3>
+<div class="role">Programming Enthusiast</div>
+</div>
+
+</div>
+
+<div class="review">
+Coding challenges and group discussions improved my problem-solving skills.
+</div>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<div class="profile">
+
+<img src="https://randomuser.me/api/portraits/women/76.jpg">
+
+<div>
+<h3>Neha Kapoor</h3>
+<div class="role">IT Student</div>
+</div>
+
+</div>
+
+<div class="review">
+This platform made learning programming fun and interactive.
+</div>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+
+
+</section>
+
+<script>
+
+const authArea = document.getElementById("authArea");
+const username = localStorage.getItem("username");
+
+if(username){
+
+    authArea.innerHTML = `
+        <span style="margin-right:15px; font-weight:500;">
+            👋 ${username}
+        </span>
+    `;
+}
+
+function logout(){
+    localStorage.removeItem("username");
+    window.location.reload();
+}
+
+</script>
+
+
+
+</body>
+
+</html>

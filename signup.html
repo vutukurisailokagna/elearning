@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - E-learning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:lavender;
+}
+
+.container{
+background:white;
+width:360px;
+padding:40px 30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+color:#64748b;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.input-group{
+margin-bottom:18px;
+text-align:left;
+}
+
+label{
+font-size:14px;
+font-weight:500;
+}
+
+input{
+width:100%;
+padding:10px 15px;
+margin-top:6px;
+border-radius:25px;
+border:1px solid #ddd;
+outline:none;
+}
+
+input:focus{
+border-color:#5b5bff;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:25px;
+background:#5b5bff;
+color:white;
+font-weight:500;
+cursor:pointer;
+margin-top:10px;
+transition:.3s;
+}
+
+button:hover{
+background:#4444dd;
+}
+
+.extra{
+margin-top:20px;
+font-size:14px;
+color:#64748b;
+}
+
+.extra a{
+color:#5b5bff;
+text-decoration:none;
+font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Create Account 🚀</h2>
+<p>Start your learning journey today</p>
+
+<form id="signupForm">
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" placeholder="Create password" required>
+</div>
+
+<button type="submit">Sign Up</button>
+</form>
+
+<div class="extra">
+Already have an account? <a href="login1.html">Login</a>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("signupForm").addEventListener("submit", function(event){
+
+    event.preventDefault(); // Stop page refresh
+
+    const name = document.querySelector("input[type='text']").value;
+    const email = document.querySelector("input[type='email']").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    if(name.trim() !== "" && email.trim() !== "" && password.trim() !== ""){
+        
+        // Redirect to homepage
+        window.location.href = "ecom.html";
+
+    } else {
+        alert("Please fill all fields");
+    }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - E-learning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:lavender;
+}
+
+/* LOGIN CARD */
+
+.container{
+background:white;
+width:360px;
+padding:40px 30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+color:#64748b;
+font-size:14px;
+margin-bottom:25px;
+}
+
+/* INPUT FIELDS */
+
+.input-group{
+margin-bottom:18px;
+text-align:left;
+}
+
+label{
+font-size:14px;
+font-weight:500;
+}
+
+input{
+width:100%;
+padding:10px 15px;
+margin-top:6px;
+border-radius:25px;
+border:1px solid #ddd;
+outline:none;
+font-size:14px;
+}
+
+input:focus{
+border-color:#5b5bff;
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:25px;
+background:#5b5bff;
+color:white;
+font-weight:500;
+cursor:pointer;
+margin-top:10px;
+transition:.3s;
+}
+
+button:hover{
+background:#4444dd;
+}
+
+/* FOOTER */
+
+.extra{
+margin-top:20px;
+font-size:14px;
+color:#64748b;
+}
+
+.extra a{
+color:#5b5bff;
+text-decoration:none;
+font-weight:500;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Welcome Back 👋</h2>
+<p>Login to continue learning</p>
+
+<form id="loginForm">
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="Enter your password" required>
+</div>
+
+<button type="submit">Login</button>
+
+</form>
+
+<div class="extra">
+Don't have an account? <a href="signup.html">Sign Up</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+
+    if(email.trim() !== ""){
+
+        // Extract name from email (before @)
+        const username = email.split("@")[0];
+
+        // Save user in localStorage
+        localStorage.setItem("username", username);
+
+        // Redirect to home
+        window.location.href = "ecom.html";
+    }
+
+});
+
+</script>   
+
+</body>
+</html>

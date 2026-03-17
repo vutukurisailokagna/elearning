@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mentors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9ff;
+color:#1e293b;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+}
+
+.logo span{
+color:#5b5bff;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+.nav-links a.active{
+color:black;
+font-weight:600;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px 8% 20px;
+}
+
+.header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.header p{
+color:#64748b;
+}
+
+
+/* MENTOR GRID */
+
+.mentors{
+
+padding:20px 8% 80px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+/* MENTOR CARD */
+
+.mentor-card{
+
+background:white;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+text-align:center;
+
+padding:25px;
+
+transition:.3s;
+
+}
+
+.mentor-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+
+}
+
+.mentor-card img{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+margin-bottom:15px;
+
+object-fit:cover;
+
+}
+
+
+/* NAME */
+
+.mentor-card h3{
+
+margin-bottom:5px;
+
+}
+
+/* ROLE */
+
+.role{
+
+color:#5b5bff;
+
+font-size:14px;
+
+margin-bottom:10px;
+
+}
+
+
+/* DESCRIPTION */
+
+.mentor-card p{
+
+font-size:14px;
+
+color:#64748b;
+
+margin-bottom:15px;
+
+}
+
+
+/* BUTTON */
+
+.contact-btn{
+
+padding:10px 20px;
+
+border:none;
+
+border-radius:25px;
+
+background:#5b5bff;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.contact-btn:hover{
+
+background:#4444dd;
+
+}
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:10px 25px;
+    border-radius:30px;
+    border:none;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.btn-signin{
+    background:linear-gradient(90deg,#6c63ff,#5a54e8);
+    color:white;
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+
+display:none;
+
+}
+
+}
+
+.btn{
+    text-decoration: none ;
+}
+
+.search-container{
+    text-align:center;
+    margin:30px 0;
+}
+
+.search-container input{
+    padding:12px 20px;
+    width:280px;
+    border-radius:25px;
+    border:1px solid #ddd;
+    outline:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+E-learning<span>.</span>
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="ecom.html">Home</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="mentor.html" class="active">Mentor</a></li>
+
+<li><a href="group.html">Group</a></li>
+
+<li><a href="testimonials.html">Testimonials</a></li>
+
+<li><a href="docs.html">Docs</a></li>
+
+</ul>
+<div class="nav-buttons" id="authArea">
+<a href="login1.html" class="btn btn-signin">Login</a>
+<a href="signup.html" class="btn btn-signup">Sign Up</a>
+</div>
+</nav>
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>Meet Our Mentors</h1>
+
+<p>Learn from experienced industry professionals</p>
+
+</div>
+
+<!-- SEARCH BAR -->
+<div class="search-container">
+    <input type="text" id="mentorSearch" placeholder="Search mentors by name or skill...">
+</div>
+
+
+
+<!-- MENTORS -->
+
+<section class="mentors">
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<h3>Rahul Sharma</h3>
+
+<div class="role">
+Web Development Mentor
+</div>
+
+<p>
+Expert in HTML CSS JavaScript with 8 years experience.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Rahul Sharma')">
+Book Session
+</button>
+
+</div>
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<h3>Anita Reddy</h3>
+
+<div class="role">
+Python Mentor
+</div>
+
+<p>
+Specialist in Python and Data Science projects.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Anita Reddy')">
+Book Session
+</button>
+
+</div>
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+
+<h3>Vikram Patel</h3>
+
+<div class="role">
+Java Mentor
+</div>
+
+<p>
+Object oriented programming expert in Java.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Vikram Patel')">
+Book Session
+</button>
+
+</div>
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/22.jpg">
+
+<h3>Sneha Verma</h3>
+
+<div class="role">
+AI Mentor
+</div>
+
+<p>
+Machine learning and AI specialist.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Sneha Verma')">
+Book Session
+</button>
+
+</div>
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/12.jpg">
+
+<h3>Arjun Kumar</h3>
+
+<div class="role">
+C Programming Mentor
+</div>
+
+<p>
+Data structures and C programming trainer.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Arjun Kumar')">
+Book Session
+</button>
+
+</div>
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg">
+
+<h3>Karan Mehta</h3>
+
+<div class="role">
+Full Stack Mentor
+</div>
+
+<p>
+MERN stack developer with real-time project experience.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Karan Mehta')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/30.jpg">
+
+<h3>Divya Nair</h3>
+
+<div class="role">
+UI/UX Mentor
+</div>
+
+<p>
+Design thinking expert with modern UI tools knowledge.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Divya Nair')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/41.jpg">
+
+<h3>Rohit Verma</h3>
+
+<div class="role">
+Cloud Computing Mentor
+</div>
+
+<p>
+AWS and Azure certified cloud solutions architect.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Rohit Verma')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/18.jpg">
+
+<h3>Neha Gupta</h3>
+
+<div class="role">
+Cyber Security Mentor
+</div>
+
+<p>
+Ethical hacking and network security specialist.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Neha Gupta')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/63.jpg">
+
+<h3>Sanjay Rao</h3>
+
+<div class="role">
+DevOps Mentor
+</div>
+
+<p>
+CI/CD pipelines, Docker and Kubernetes expert.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Sanjay Rao')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/52.jpg">
+
+<h3>Meera Iyer</h3>
+
+<div class="role">
+Blockchain Mentor
+</div>
+
+<p>
+Smart contracts and Web3 application developer.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Rahul Sharma')">
+Book Session
+</button>
+
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/men/27.jpg">
+
+<h3>Akash Sharma</h3>
+
+<div class="role">
+React JS Mentor
+</div>
+
+<p>
+Frontend specialist building scalable applications.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Akash Sharma')">
+Book Session
+</button>
+</div>
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/70.jpg">
+
+<h3>Priya Kapoor</h3>
+
+<div class="role">
+Digital Marketing Mentor
+</div>
+
+<p>
+SEO and social media growth strategist.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Priya Kapoor')">
+Book Session
+</button>
+
+</div>
+
+
+
+<div class="mentor-card">
+
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+
+<h3>Pooja Singh</h3>
+
+<div class="role">
+Data Science Mentor
+</div>
+
+<p>
+Expert in data analysis and visualization.
+</p>
+
+<button class="contact-btn" onclick="openBooking('Pooja Singh')">
+Book Session
+</button>
+</div>
+
+
+
+</section>
+
+<!-- BOOK SESSION POPUP -->
+
+<div id="bookingPopup" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+z-index:1000;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+width:320px;
+text-align:center;
+">
+
+<h3 id="mentorName">Book Session</h3>
+
+<input type="date" id="sessionDate" style="
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+">
+
+<input type="time" id="sessionTime" style="
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+">
+
+<button onclick="confirmBooking()" style="
+padding:10px 20px;
+background:#5b5bff;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+margin-top:10px;
+">
+Confirm Booking
+</button>
+
+<br><br>
+
+<button onclick="closeBooking()" style="
+background:none;
+border:none;
+color:red;
+cursor:pointer;
+">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+<script>
+const authArea = document.getElementById("authArea");
+const username = localStorage.getItem("username");
+
+if(username){
+
+    authArea.innerHTML = `
+        <span style="margin-right:15px; font-weight:500;">
+            👋 ${username}
+        </span>
+    `;
+}
+
+function logout(){
+    localStorage.removeItem("username");
+    window.location.reload();
+}
+document.getElementById("mentorSearch")
+.addEventListener("keyup", function(){
+
+    const filter = this.value.toLowerCase();
+    const mentors = document.querySelectorAll(".mentor-card");
+
+    mentors.forEach(mentor => {
+        const name = mentor.querySelector("h3").textContent.toLowerCase();
+        const skill = mentor.querySelector("p").textContent.toLowerCase();
+
+        if(name.includes(filter) || skill.includes(filter)){
+            mentor.style.display = "block";
+        } else {
+            mentor.style.display = "none";
+        }
+    });
+
+});
+
+let selectedMentor = "";
+
+function openBooking(name){
+
+const username = localStorage.getItem("username");
+
+if(!username){
+alert("Please login to book a session");
+window.location.href = "login1.html";
+return;
+}
+
+selectedMentor = name;
+
+document.getElementById("mentorName").innerText =
+"Book Session with " + name;
+
+document.getElementById("bookingPopup").style.display = "flex";
+
+}
+
+function closeBooking(){
+document.getElementById("bookingPopup").style.display = "none";
+}
+
+function confirmBooking(){
+
+const date = document.getElementById("sessionDate").value;
+const time = document.getElementById("sessionTime").value;
+
+if(date === "" || time === ""){
+alert("Please select date and time");
+return;
+}
+
+alert("Session booked with " + selectedMentor + " on " + date + " at " + time);
+
+closeBooking();
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>

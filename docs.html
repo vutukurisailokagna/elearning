@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Documentation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9ff;
+color:#1e293b;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+}
+
+.logo span{
+color:#5b5bff;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+.nav-links a.active{
+color:black;
+font-weight:600;
+}
+
+
+/* HEADER */
+
+.header{
+
+text-align:center;
+
+padding:60px 8% 30px;
+
+}
+
+.header h1{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.header p{
+
+color:#64748b;
+
+}
+
+
+/* DOC CONTENT */
+
+.docs{
+
+padding:20px 12% 80px;
+
+}
+
+
+/* DOC CARD */
+
+.doc-section{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+}
+
+.doc-section h2{
+
+margin-bottom:10px;
+
+color:#5b5bff;
+
+}
+
+.doc-section p{
+
+color:#64748b;
+
+margin-bottom:10px;
+
+line-height:1.6;
+
+}
+
+
+/* LIST */
+
+.doc-section ul{
+
+margin-left:20px;
+
+color:#475569;
+
+}
+
+.doc-section li{
+
+margin-bottom:8px;
+
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:10px 25px;
+    border-radius:30px;
+    border:none;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.btn-signin{
+    background:linear-gradient(90deg,#6c63ff,#5a54e8);
+    color:white;
+}
+
+.btn{
+    text-decoration: none ;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+.docs{
+
+padding:20px 8% 80px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+E-learning<span>.</span>
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="ecom.html">Home</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="mentor.html">Mentor</a></li>
+
+<li><a href="group.html">Group</a></li>
+
+<li><a href="testimonials.html">Testimonials</a></li>
+
+<li><a href="#" class="active">Docs</a></li>
+
+</ul>
+
+<div class="nav-buttons" id="authArea">
+<a href="login1.html" class="btn btn-signin">Login</a>
+<a href="signup.html" class="btn btn-signup">Sign Up</a>
+</div>
+
+</nav>
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>Documentation</h1>
+
+<p>Learn how to use the E-learning platform</p>
+
+</div>
+
+
+
+<!-- DOCS -->
+
+<section class="docs">
+
+
+
+<div class="doc-section">
+
+<h2>Getting Started</h2>
+
+<p>
+
+Welcome to the E-learning platform. This website helps students improve skills through courses and mentors.
+
+</p>
+
+<ul>
+
+<li>Create your account</li>
+
+<li>Login to the platform</li>
+
+<li>Select courses</li>
+
+<li>Start learning</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="doc-section">
+
+<h2>Courses</h2>
+
+<p>
+
+The Courses page contains programming and technology courses.
+
+</p>
+
+<ul>
+
+<li>Search any Courses</li>
+
+<li>Select your course</li>
+
+<li>Click Enroll</li>
+
+<li>Start learning</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="doc-section">
+
+<h2>Mentors</h2>
+
+<p>
+
+Mentors help students understand difficult topics.
+
+</p>
+
+<ul>
+
+<li>Search a mentor </li>
+
+<li>Choose a mentor</li>
+
+<li>Contact mentor</li>
+
+<li>Ask questions</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="doc-section">
+
+<h2>Groups</h2>
+
+<p>
+
+Groups allow students to learn together.
+
+</p>
+
+<ul>
+
+<li>Search a group</li>
+
+<li>Create a group</li>
+
+<li>Join group</li>
+
+<li>Discuss topics</li>
+
+<li>Share knowledge</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="doc-section">
+
+<h2>Testimonials</h2>
+
+<p>
+
+Testimonials show feedback from students.
+
+</p>
+
+<ul>
+
+<li>Read student reviews</li>
+
+<li>Know platform benefits</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="doc-section">
+
+<h2>Support</h2>
+
+<p>
+
+If you need help, contact support team.
+
+</p>
+
+<ul>
+
+<li>Email support</li>
+
+<li>Contact mentors</li>
+
+<li>Join groups</li>
+
+</ul>
+
+</div>
+
+
+
+</section>
+
+<script>
+
+const authArea = document.getElementById("authArea");
+const username = localStorage.getItem("username");
+
+if(username){
+
+    authArea.innerHTML = `
+        <span style="margin-right:15px; font-weight:500;">
+            👋 ${username}
+        </span>
+        <button onclick="logout()" class="btn btn-signin">Logout</button>
+    `;
+}
+
+function logout(){
+    localStorage.removeItem("username");
+    window.location.reload();
+}
+
+</script>
+
+
+</body>
+
+</html>

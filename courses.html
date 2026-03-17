@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9ff;
+color:#1e293b;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+}
+
+.logo span{
+color:#5b5bff;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+.nav-links a.active{
+color:black;
+font-weight:600;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px 8% 20px;
+}
+
+.header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.header p{
+color:#64748b;
+}
+
+/* FILTER SECTION */
+
+.filters{
+    text-align:center;
+    margin:40px 0;
+}
+
+.filters button{
+    padding:10px 25px;
+    margin:5px;
+    border:none;
+    border-radius:25px;
+    background:#eef1ff;
+    color:#5b5bff;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filters button:hover{
+    background:#5b5bff;
+    color:white;
+}
+
+.filters button.active{
+    background:#5b5bff;
+    color:white;
+}
+
+/* SEARCH BOX */
+
+.search-box{
+text-align:center;
+margin:20px 0 40px;
+}
+
+.search-box input{
+width:320px;
+padding:12px 20px;
+border-radius:30px;
+border:1px solid #ddd;
+outline:none;
+font-size:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* COURSE GRID */
+
+.courses{
+padding:20px 8% 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* COURSE CARD */
+
+.course-card{
+background:white;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+overflow:hidden;
+transition:.3s;
+}
+
+.course-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.course-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.course-info{
+padding:20px;
+}
+
+.course-info h3{
+margin-bottom:10px;
+}
+
+.course-info p{
+color:#64748b;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.level{
+font-size:12px;
+background:#eef2ff;
+display:inline-block;
+padding:5px 12px;
+border-radius:20px;
+margin-bottom:10px;
+color:#5b5bff;
+}
+
+.enroll-btn{
+width:100%;
+padding:10px;
+border:none;
+border-radius:25px;
+background:#5b5bff;
+color:white;
+font-weight:500;
+cursor:pointer;
+}
+
+.enroll-btn:hover{
+background:#4444dd;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:10px 25px;
+    border-radius:30px;
+    border:none;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.btn-signin{
+    background:linear-gradient(90deg,#6c63ff,#5a54e8);
+    color:white;
+}
+.btn{
+    text-decoration: none ;
+}
+
+
+@media(max-width:900px){
+.nav-links{
+display:none;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<div class="logo">E-learning<span>.</span></div>
+
+<ul class="nav-links">
+<li><a href="ecom.html">Home</a></li>
+<li><a href="#" class="active">Courses</a></li>
+<li><a href="mentor.html">Mentor</a></li>
+<li><a href="group.html">Group</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="docs.html">Docs</a></li>
+</ul>
+
+<div class="nav-buttons" id="authArea">
+<a href="login1.html" class="btn btn-signin">Login</a>
+<a href="signup.html" class="btn btn-signup">Sign Up</a>
+</div>
+
+</nav>
+
+<!-- HEADER -->
+
+<div class="header">
+<h1>Explore Our Courses</h1>
+<p>Choose the best course to grow your skills</p>
+</div>
+
+<!-- FILTERS -->
+
+<div class="filters">
+    <button onclick="filterCourses('all',event)">All</button>
+    <button onclick="filterCourses('programming',event)">Programming</button>
+    <button onclick="filterCourses('web',event)">Web</button>
+    <button onclick="filterCourses('data',event)">data</button>
+</div>
+
+<!-- SEARCH BOX -->
+
+<div class="search-box">
+    <input type="text" id="courseSearch" placeholder="Search courses...">
+</div>
+
+<!-- COURSES -->
+
+<section class="courses">
+
+<div class="course-card" data-category="programming">
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97">
+<div class="course-info">
+<div class="level">Beginner</div>
+<h3>C Programming</h3>
+<p>Learn fundamentals of C programming with examples.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="web">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div class="course-info">
+<div class="level">Intermediate</div>
+<h3>Web Development</h3>
+<p>Learn HTML CSS JavaScript and build websites.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="programming">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>Python Programming</h3>
+<p>Master Python programming from basics to advanced.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>Artificial Intelligence</h3>
+<p>Learn machine learning and AI concepts.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="course-info">
+<div class="level">Beginner</div>
+<h3>Data Science</h3>
+<p>Learn data analysis and visualization.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="programming">
+<img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159">
+<div class="course-info">
+<div class="level">Intermediate</div>
+<h3>Java Programming</h3>
+<p>Object oriented programming using Java.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="ml.jpeg">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>Machine Learning</h3>
+<p>Learn patterns from data to make predictions.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="ads.webp">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>advanced data structures</h3>
+<p>we delve into advanced structures like trees, graphs, and hash tables.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="web">
+<img src="reactjs.png">
+<div class="course-info">
+<div class="level">Basic</div>
+<h3>Reactjs</h3>
+<p> Build user interfaces out of individual pieces called components written in JavaScript.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="programming">
+<img src="c+.jpg">
+<div class="course-info">
+<div class="level">Basic</div>
+<h3>C++ programming language</h3>
+<p>C++ is a generic programming language for building software. </p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+
+<div class="course-card" data-category="data">
+<img src="sgl.jpeg">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>SQL</h3>
+<p>the standard language for managing and querying relational databases.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card"data-category="programming">
+<img src="c++1.png">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>C++ programming language</h3>
+<p>C++ is a generic programming language for building software. </p>
+<button class="enroll-btn" onclick="enrollCourse(this)" >Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="web">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<div class="course-info">
+<div class="level">Beginner</div>
+<h3>HTML & CSS Fundamentals</h3>
+<p>Learn how to build modern and responsive web pages using HTML and CSS.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="web">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
+<div class="course-info">
+<div class="level">Intermediate</div>
+<h3>JavaScript Essentials</h3>
+<p>Understand JavaScript basics and create interactive websites.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="course-info">
+<div class="level">Intermediate</div>
+<h3>Database Management</h3>
+<p>Learn how to manage and organize databases using SQL.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="data">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>Big Data Analytics</h3>
+<p>Analyze massive datasets and extract meaningful insights.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="programming">
+<img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
+<div class="course-info">
+<div class="level">Intermediate</div>
+<h3>Object Oriented Programming</h3>
+<p>Learn OOP concepts like classes, objects, inheritance and polymorphism.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+<div class="course-card" data-category="programming">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<div class="course-info">
+<div class="level">Advanced</div>
+<h3>Competitive Programming</h3>
+<p>Improve your problem solving skills for coding competitions.</p>
+<button class="enroll-btn" onclick="enrollCourse(this)">Enroll Now</button>
+</div>
+</div>
+
+
+
+
+</section>
+
+<!-- SEARCH SCRIPT -->
+
+<script>
+
+// ================= FILTER FUNCTION =================
+function filterCourses(category,event){
+
+    const courses = document.querySelectorAll(".course-card");
+    const buttons = document.querySelectorAll(".filters button");
+
+    // Remove active class
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Add active class to clicked button
+    event.target.classList.add("active");
+
+    courses.forEach(course => {
+
+        if(category === "all"){
+            course.style.display = "block";
+        } 
+        else if(course.getAttribute("data-category") === category){
+            course.style.display = "block";
+        } 
+        else{
+            course.style.display = "none";
+        }
+
+    });
+}
+
+
+// ================= SEARCH FUNCTION =================
+function applySearch(value){
+
+    const searchValue = value.toLowerCase();
+    const courses = document.querySelectorAll(".course-card");
+
+    courses.forEach(course => {
+
+        const title = course.querySelector("h3").textContent.toLowerCase();
+        const description = course.querySelector("p").textContent.toLowerCase();
+
+        if(title.includes(searchValue) || description.includes(searchValue)){
+            course.style.display = "block";
+        } else {
+            course.style.display = "none";
+        }
+
+    });
+}
+
+
+// Search inside courses page
+document.getElementById("courseSearch")
+.addEventListener("keyup", function(){
+    applySearch(this.value);
+});
+
+
+// ================= GET SEARCH FROM HOME =================
+const params = new URLSearchParams(window.location.search);
+const searchFromHome = params.get("search");
+
+if(searchFromHome){
+    document.getElementById("courseSearch").value = searchFromHome;
+    applySearch(searchFromHome);
+}
+
+
+// ================= LOGIN DISPLAY =================
+const authArea = document.getElementById("authArea");
+const username = localStorage.getItem("username");
+
+if(username){
+    authArea.innerHTML = `
+        <span style="margin-right:15px; font-weight:500;">
+            👋 ${username}
+        </span>
+        <button onclick="logout()" class="btn btn-signin">Logout</button>
+    `;
+}
+
+function logout(){
+    localStorage.removeItem("username");
+    window.location.reload();
+}
+
+
+// ================= ENROLL FUNCTION =================
+function enrollCourse(button){
+
+    const username = localStorage.getItem("username");
+
+    if(!username){
+        alert("Please login to enroll in course");
+        window.location.href = "login.html";
+        return;
+    }
+
+    button.textContent = "Enrolled";
+    button.style.background = "green";
+    button.disabled = true;
+
+    alert("Successfully Enrolled 🎉");
+}
+
+</script>
+</body>
+</html>
